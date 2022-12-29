@@ -29,7 +29,8 @@ import {
   CalendarMonthOutlined,
   AdminPanelSettingsOutlined,
   TrendingUpOutlined,
-  PieChartOutlined
+  PieChartOutlined,
+  Settings
 } from '@mui/icons-material'
 
 const navItems = [
@@ -92,6 +93,7 @@ const navItems = [
 ]
 
 const Sidebar = ({
+  user,
   drawerWidth,
   isSidebarOpen,
   setIsSidebarOpen,
@@ -180,6 +182,42 @@ const Sidebar = ({
                 )
               })}
             </List>
+          </Box>
+
+          <Box position='relative' bottom='2rem' m='1.5rem 0 0 0'>
+            <Divider />
+            <FlexBetween textTransform='none' gap='1rem' m='1.5rem 2rem 0rem 3rem'>
+              <Box
+                component='img'
+                alt='profile'
+                src={profileImage}
+                height='40px'
+                width='40px'
+                borderRadius='50%'
+                sx={{ objectFit: 'cover' }}
+              />
+                <Box textAlign='left'>
+                  <Typography
+                    fontWeight='bold'
+                    fontSize='0.9rem'
+                    sx={{ color: theme.palette.secondary[100] }}
+                  >
+                    {user.name}
+                  </Typography>
+                  <Typography
+                    fontWeight='bold'
+                    fontSize='0.8rem'
+                    sx={{ color: theme.palette.secondary[200] }}
+                  >
+                    {user.occupation}
+                  </Typography>
+                </Box>
+                <SettingsOutlined
+                  fontSize='25px'
+                  sx={{ color: theme.palette.secondary[100] }}
+                />
+              
+            </FlexBetween> 
           </Box>
         </Drawer>
       )}

@@ -21,7 +21,7 @@ const UserSchema = new mongoose.Schema({
   city: String,
   state: String,
   country: String,
-  occuptation: String,
+  occupation: String,
   phone: String,
   transactions: Array,
   role: {

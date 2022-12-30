@@ -120,7 +120,7 @@ function Navbar({
               anchorEl={anchorEl}
               open={isOpen}
               onClose={handleClose}
-              anchorOrigin={{ vertical: 'bottm', horizontal: 'center' }}
+              anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
             >
               <MenuItem onClick={handleClose}>Log Out</MenuItem>
             </Menu>
